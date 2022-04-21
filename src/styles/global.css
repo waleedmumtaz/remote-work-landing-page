@@ -29,8 +29,24 @@ button {
 	cursor: pointer;
 }
 
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: var(--medium-gray);
+}
+
 body {
 	font-family: var(--font-family);
+}
+
+body > :first-child {
+	position: relative;
+	overflow: hidden;
+	z-index: 0;
+	height: 100vh;
 }
 
 p {

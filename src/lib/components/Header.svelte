@@ -44,7 +44,13 @@
 				<ul>
 					<li class="features">
 						<a on:click|preventDefault={toggleFeatures} href="/#"
-							>Features<span><img src="icon-arrow-down.svg" alt="down arrow" /></span></a
+							>Features<span
+								><img
+									class:rotate-arrow={isFeaturesOpen ? 'rotate-arrow' : ''}
+									src="icon-arrow-down.svg"
+									alt="down arrow"
+								/></span
+							></a
 						>
 						{#if isFeaturesOpen}
 							<ul transition:slide class:toggle-features={isFeaturesOpen ? '' : 'toggle-features'}>
@@ -72,7 +78,13 @@
 					</li>
 					<li class="company">
 						<a on:click|preventDefault={toggleCompany} href="/#"
-							>Company<span><img src="icon-arrow-down.svg" alt="down arrow" /></span></a
+							>Company<span
+								><img
+									class:rotate-arrow={isCompanyOpen ? 'rotate-arrow' : ''}
+									src="icon-arrow-down.svg"
+									alt="down arrow"
+								/></span
+							></a
 						>
 						{#if isCompanyOpen}
 							<ul transition:slide class:toggle-company={isCompanyOpen ? '' : 'toggle-company'}>
@@ -146,5 +158,10 @@
 	.features ul li {
 		display: grid;
 		grid-template-columns: var(--size-6) auto;
+	}
+
+	.rotate-arrow {
+		transform: rotateZ(180deg);
+		transition: transform 0.5s;
 	}
 </style>

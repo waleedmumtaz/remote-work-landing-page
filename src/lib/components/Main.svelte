@@ -61,7 +61,7 @@
 
 	.container .clients {
 		padding-inline: var(--size-4);
-                padding-block-end: var(--size-8);
+    padding-block-end: var(--size-8);
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;

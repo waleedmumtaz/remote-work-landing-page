@@ -27,45 +27,45 @@
 	}
 
 	section {
-		margin-block-start: var(--size-8);
-		margin-block-end: var(--size-4);
-		padding-inline: var(--size-4);
+		margin-block-start: 2rem;
+		margin-block-end: 1.5rem;
+		padding-inline: 1.5rem;
 		text-align: center;
 	}
 
 	section h1 {
-		margin-block-end: var(--size-4);
+		margin-block-end: 1.5rem;
 	}
 
 	section p {
 		color: var(--medium-gray);
-		line-height: var(--size-5);
-		margin-block-end: var(--size-4);
+		line-height: 1.75rem;
+		margin-block-end: 1.5rem;
 	}
 
 	section button {
 		background-color: var(--almost-black);
 		color: var(--almost-white);
-		border-radius: var(--radius-3);
-		padding-inline: var(--size-5);
-		padding-block: var(--size-3);
-		margin-block-end: var(--size-4);
+		border-radius: 1rem;
+		padding-inline: 1.75rem;
+		padding-block: 1.25rem;
+		margin-block-end: 1.5rem;
 		font-size: var(--fs-paragraph);
 		font-weight: var(--fw-700);
 	}
 
 	.clients img {
-		width: var(--size-9);
+		width: 3.9rem;
 		height: auto;
 	}
 
 	.container .clients {
-		padding-inline: var(--size-4);
-    padding-block-end: var(--size-8);
+		padding-inline: 1.5rem;
+		padding-block-end: 2rem;
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
 		align-items: center;
-		gap: var(--size-4);
+		gap: 1.5rem;
 	}
 </style>

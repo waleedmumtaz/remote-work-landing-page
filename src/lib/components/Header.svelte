@@ -27,7 +27,7 @@
 
 <header>
 	<div>
-		<div class="nav-mobile">
+		<div class="nav-container">
 			<img src="/logo.svg" alt="logo" />
 			<button on:click|preventDefault={openNav}>
 				<img src="/icon-menu.svg" alt="menu" />
@@ -36,6 +36,7 @@
 		{#if isNavOpen}
 			<nav
 				transition:fly={{ x: 300, duration: 750, opacity: 1 }}
+				class="nav-mobile"
 				class:toggle-nav={isNavOpen ? '' : 'toggle-nav'}
 			>
 				<button on:click|preventDefault={closeNav} class="close-button">
@@ -104,7 +105,7 @@
 
 <style>
 	header {
-		padding: var(--size-5);
+		padding: 1.5rem;
 	}
 
 	nav {
@@ -114,14 +115,14 @@
 		bottom: 0;
 		width: 66%;
 		background-color: var(--almost-white);
-		padding: var(--size-5);
+		padding: 1.5rem;
 		z-index: 20;
 	}
 
 	.close-button {
 		display: block;
 		margin-inline-start: auto;
-		padding-block-end: var(--size-5);
+		padding-block-end: 1.5rem;
 	}
 
 	.toggle-nav,
@@ -130,7 +131,7 @@
 		display: none;
 	}
 
-	.nav-mobile {
+	.nav-container {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -140,24 +141,24 @@
 	ul {
 		display: flex;
 		flex-direction: column;
-		gap: var(--size-5);
+		gap: 1.5rem;
 	}
 
 	li a {
 		display: flex;
 		align-items: center;
-		gap: var(--size-3);
+		gap: 1rem;
 	}
 
 	.features ul,
 	.company ul {
-		margin-block-start: var(--size-3);
-		margin-inline-start: var(--size-5);
+		margin-block-start: 1rem;
+		margin-inline-start: 1.5rem;
 	}
 
 	.features ul li {
 		display: grid;
-		grid-template-columns: var(--size-6) auto;
+		grid-template-columns: 1.75rem auto;
 	}
 
 	.rotate-arrow {

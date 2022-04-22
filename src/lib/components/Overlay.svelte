@@ -1,6 +1,4 @@
-<div class="overlay">
-	<slot />
-</div>
+<div class="overlay" />
 
 <style>
 	.overlay {

@@ -1,29 +1,40 @@
 <main>
 	<div class="container">
-		<div class="hero-image">
+		<div class="mobile-hero-image">
 			<img src="/image-hero-mobile.png" alt="hero" />
 		</div>
-		<section class="content">
-			<h1>Make Remote Work</h1>
-			<p>
-				Get your team in sync, no matter your location. Streamline processes, create team rituals,
-				and watch productivity soar.
-			</p>
-			<button>Learn more</button>
-		</section>
-		<div class="clients">
-			<img src="/client-databiz.svg" alt="client databiz" />
-			<img src="/client-audiophile.svg" alt="client audiophile" />
-			<img src="/client-meet.svg" alt="client meet" />
-			<img src="/client-maker.svg" alt="client maker" />
+		<div class="desktop-hero-image">
+			<img src="/image-hero-desktop.png" alt="hero" />
+		</div>
+		<div class="content-container">
+			<div>
+				<section class="content">
+					<h1>Make remote work</h1>
+					<p>
+						Get your team in sync, no matter your location. Streamline processes, create team
+						rituals, and watch productivity soar.
+					</p>
+					<button>Learn more</button>
+				</section>
+				<div class="clients">
+					<img src="/client-databiz.svg" alt="client databiz" />
+					<img src="/client-audiophile.svg" alt="client audiophile" />
+					<img src="/client-meet.svg" alt="client meet" />
+					<img src="/client-maker.svg" alt="client maker" />
+				</div>
+			</div>
 		</div>
 	</div>
 </main>
 
 <style>
-	.hero-image img {
+	.mobile-hero-image img {
 		width: 100%;
 		height: auto;
+	}
+
+	.desktop-hero-image img {
+		display: none;
 	}
 
 	section {
@@ -54,12 +65,7 @@
 		font-weight: var(--fw-700);
 	}
 
-	.clients img {
-		width: 3.9rem;
-		height: auto;
-	}
-
-	.container .clients {
+	.clients {
 		padding-inline: 1.5rem;
 		padding-block-end: 2rem;
 		display: flex;
@@ -67,5 +73,78 @@
 		justify-content: space-between;
 		align-items: center;
 		gap: 1.5rem;
+	}
+
+	.clients img {
+		width: 3.5rem;
+		height: auto;
+	}
+
+	@media (min-width: 768px) {
+		.container {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 2rem;
+			max-width: 75rem;
+			padding-block: 4rem;
+			margin-inline: auto;
+		}
+
+		.mobile-hero-image {
+			display: none;
+		}
+
+		.desktop-hero-image {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+
+		.desktop-hero-image img {
+			display: block;
+			width: 100%;
+			height: auto;
+		}
+
+		.desktop-hero-image {
+			order: 99;
+		}
+
+		.content-container {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+
+		section {
+			text-align: left;
+		}
+
+		section h1 {
+			font-size: 5rem;
+		}
+
+		section p {
+			max-width: 30rem;
+			padding-block: 2rem;
+		}
+
+		section button:hover {
+			background-color: var(--almost-white);
+			color: var(--almost-black);
+			outline: 1px solid var(--almost-black);
+		}
+
+		.clients {
+			display: flex;
+			justify-content: start;
+			gap: 3rem;
+			margin-block-start: 5rem;
+		}
+
+		.clients img {
+			width: 5rem;
+			height: auto;
+		}
 	}
 </style>

@@ -7,6 +7,10 @@
 	import '../styles/global.css';
 </script>
 
+<svelte:head>
+	<title>Remote Work Landing Page</title>
+</svelte:head>
+
 {#if $isOverlayOpen}
 	<Overlay />
 {/if}

@@ -124,7 +124,7 @@
 				</ul>
 				<ul>
 					<li><a href="/#">Login</a></li>
-					<button>Register</button>
+					<li><a href="/#">Register</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -312,7 +312,7 @@
 			color: black;
 		}
 
-		.nav-desktop ul:nth-of-type(2) button {
+		.nav-desktop ul:nth-of-type(2) li:last-of-type a {
 			padding-inline: 2rem;
 			padding-block: 1rem;
 			border-radius: 1rem;
@@ -320,7 +320,7 @@
 			font-family: var(--font-family);
 		}
 
-		.nav-desktop ul:nth-of-type(2) button:hover {
+		.nav-desktop ul:nth-of-type(2) li:last-of-type a:hover {
 			border: 1px solid black;
 		}
 
